@@ -17,6 +17,7 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import sortClassMembers from 'eslint-plugin-sort-class-members';
 import tsdoc from 'eslint-plugin-tsdoc';
+import unicorn from 'eslint-plugin-unicorn';
 // eslint-disable-next-line import-x/namespace, import-x/default, import-x/no-named-as-default, import-x/no-named-as-default-member
 import unusedImports from 'eslint-plugin-unused-imports';
 import globals from 'globals';
@@ -31,7 +32,8 @@ export default tsEslintConfig(
 	eslintPluginImportX.flatConfigs.recommended,
 	eslintPluginImportX.flatConfigs.typescript,
 	eslintPluginPrettierRecommended,
-	oxlint.configs['flat/recommended'],
+	oxlint.configs['flat/all'],
+	unicorn.configs['flat/recommended'],
 	...eslintPluginJsonc.configs['flat/recommended-with-jsonc'],
 	...eslintPluginJsonc.configs['flat/prettier'],
 
@@ -309,6 +311,16 @@ export default tsEslintConfig(
 					blankLine: 'never',
 					prev: 'function-overload',
 					next: 'function-overload',
+				},
+			],
+			'unicorn/filename-case': [
+				'error',
+				{
+					cases: {
+						camelCase: true,
+						pascalCase: true,
+					},
+					ignore: ['package-lock.json', /\.d\.ts$/],
 				},
 			],
 

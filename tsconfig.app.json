@@ -39,5 +39,5 @@
 			"/*": ["public/*"]
 		}
 	},
-	"include": ["src", "commitlint.config.ts"]
+	"include": ["src", "commitlint.config.ts", "borrar.ts"]
 }

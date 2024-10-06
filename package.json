@@ -15,6 +15,7 @@
 		"stylelint:fix": "stylelint --fix ./**/*.{css,scss}",
 		"lint-md": "markdownlint-cli2 --config \".markdownlint.json\" **/*.md \"#node_modules\"",
 		"lint-md:fix": "markdownlint-cli2 --config \".markdownlint.json\" --fix **/*.md \"#node_modules\"",
+		"lint-html": "htmlhint **/*.html",
 		"check-for-dupes": "npx jscpd ./"
 	},
 	"dependencies": {
@@ -55,6 +56,7 @@
 		"eslint-plugin-unicorn": "^56.0.0",
 		"eslint-plugin-unused-imports": "^4.1.4",
 		"globals": "^15.10.0",
+		"htmlhint": "^1.1.4",
 		"husky": "^9.1.6",
 		"jscpd": "^4.0.5",
 		"markdownlint-cli2": "^0.14.0",

@@ -11,10 +11,11 @@
 		"lint:fix": "oxlint --fix && eslint --fix ./**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts,json}",
 		"prettier": "prettier . --check",
 		"prettier:fix": "prettier . --write",
-		"check-for-dupes": "npx jscpd ./",
 		"stylelint": "stylelint ./**/*.{css,scss}",
 		"stylelint:fix": "stylelint --fix ./**/*.{css,scss}",
-		"prepare": "husky"
+		"lint-md": "markdownlint-cli2 --config \".markdownlint.json\" **/*.md \"#node_modules\"",
+		"lint-md:fix": "markdownlint-cli2 --config \".markdownlint.json\" --fix **/*.md \"#node_modules\"",
+		"check-for-dupes": "npx jscpd ./"
 	},
 	"dependencies": {
 		"react": "^18.3.1",
@@ -56,6 +57,7 @@
 		"globals": "^15.10.0",
 		"husky": "^9.1.6",
 		"jscpd": "^4.0.5",
+		"markdownlint-cli2": "^0.14.0",
 		"oxlint": "^0.6.1",
 		"prettier": "3.3.3",
 		"stylelint": "^16.9.0",

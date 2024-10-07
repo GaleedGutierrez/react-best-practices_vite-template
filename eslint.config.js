@@ -104,13 +104,14 @@ export default tsEslintConfig(
 			],
 
 			'no-await-in-loop': 'error',
+			'no-constant-binary-expression': 'error',
 			'no-constructor-return': 'error',
 			'no-promise-executor-return': 'error',
 			'no-self-compare': 'error',
 			'no-template-curly-in-string': 'error',
 			'no-unmodified-loop-condition': 'error',
 			'no-unreachable-loop': 'error',
-
+			'no-unused-private-class-members': 'error',
 			'no-use-before-define': [
 				'error',
 				{
@@ -120,29 +121,27 @@ export default tsEslintConfig(
 					allowNamedExports: false,
 				},
 			],
-
 			'require-atomic-updates': 'error',
 			'no-lone-blocks': 'error',
 			'no-underscore-dangle': 'error',
+
+			// Good Practices
 			camelcase: 'error',
 			eqeqeq: 'error',
 			'new-cap': 'error',
 			'no-array-constructor': 'error',
-
 			'no-console': [
 				'error',
 				{
 					allow: ['error'],
 				},
 			],
-
 			'no-else-return': [
 				'error',
 				{
 					allowElseIf: false,
 				},
 			],
-
 			'no-extend-native': 'error',
 			'no-lonely-if': 'error',
 			'no-param-reassign': 'error',
@@ -156,14 +155,15 @@ export default tsEslintConfig(
 			'prefer-template': 'error',
 			radix: 'error',
 			yoda: 'error',
+
+			// Style
+			curly: 'error',
 			'no-unneeded-ternary': 'error',
 			'prefer-arrow-callback': 'error',
 			'no-nested-ternary': 'error',
 			'max-depth': ['error', 5],
 			'no-implicit-coercion': 'error',
 			'arrow-body-style': ['error', 'as-needed'],
-			curly: 'error',
-
 			'@stylistic/lines-between-class-members': [
 				'error',
 				{
@@ -199,7 +199,6 @@ export default tsEslintConfig(
 					exceptAfterSingleLine: true,
 				},
 			],
-
 			'@stylistic/padding-line-between-statements': [
 				'error',
 				{
@@ -350,7 +349,6 @@ export default tsEslintConfig(
 			'simple-import-sort/exports': 'error',
 			'simple-import-sort/imports': 'error',
 			'unused-imports/no-unused-imports': 'error',
-
 			'unused-imports/no-unused-vars': [
 				'warn',
 				{
@@ -380,7 +378,9 @@ export default tsEslintConfig(
 		},
 
 		rules: {
+			'unused-imports/no-unused-vars': 'off',
 			'tsdoc/syntax': 'warn',
+			'@typescript-eslint/no-confusing-non-null-assertion': 'error',
 			'@typescript-eslint/explicit-module-boundary-types': 'error',
 			'@typescript-eslint/explicit-function-return-type': 'error',
 			'@typescript-eslint/no-non-null-assertion': 'error',
@@ -389,23 +389,22 @@ export default tsEslintConfig(
 			'@typescript-eslint/no-useless-constructor': 'error',
 			'@typescript-eslint/prefer-readonly': 'error',
 			'@typescript-eslint/switch-exhaustiveness-check': 'error',
+			'@typescript-eslint/prefer-for-of': 'error',
+			'@typescript-eslint/prefer-nullish-coalescing': 'error',
 			'@typescript-eslint/no-unnecessary-boolean-literal-compare':
 				'error',
-
 			'@typescript-eslint/promise-function-async': [
 				'error',
 				{
 					checkArrowFunctions: false,
 				},
 			],
-
 			'@typescript-eslint/no-confusing-void-expression': [
 				'error',
 				{
 					ignoreArrowShorthand: true,
 				},
 			],
-
 			'@typescript-eslint/naming-convention': [
 				'error',
 				{
@@ -441,9 +440,6 @@ export default tsEslintConfig(
 					format: ['PascalCase'],
 				},
 			],
-
-			'unused-imports/no-unused-vars': 'off',
-
 			'@typescript-eslint/no-unused-vars': [
 				'error',
 				{
@@ -456,7 +452,6 @@ export default tsEslintConfig(
 					ignoreRestSiblings: true,
 				},
 			],
-
 			'@typescript-eslint/member-ordering': [
 				'error',
 				{

@@ -1,5 +1,11 @@
 {
 	"rules": {
+		"array-callback-return": [
+			"error",
+			{
+				"checkForEach": true
+			}
+		],
 		"jsx_a11y/anchor-is-valid": "off",
 		"security/api-keys": "error"
 	}

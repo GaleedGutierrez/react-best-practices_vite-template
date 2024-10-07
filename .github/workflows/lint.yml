@@ -57,7 +57,7 @@ jobs:
           fetch-depth: 0
 
       - name: 💐 Super-linter
-        uses: super-linter/super-linter@v7.0.0 # x-release-please-version
+        uses: super-linter/super-linter@v7.1.0 # x-release-please-version
         env:
           # To report GitHub Actions status checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -69,6 +69,9 @@ jobs:
           VALIDATE_TYPESCRIPT_ES: false
           VALIDATE_TYPESCRIPT_PRETTIER: false
           VALIDATE_TYPESCRIPT_STANDARD: false
+          VALIDATE_JAVASCRIPT_ES: false
+          VALIDATE_JAVASCRIPT_PRETTIER: false
+          VALIDATE_JAVASCRIPT_STANDARD: false
           VALIDATE_JSON: false
           VALIDATE_JSON_PRETTIER: false
           VALIDATE_JSONC: false

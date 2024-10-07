@@ -133,7 +133,7 @@ export default tsEslintConfig(
 			'no-console': [
 				'error',
 				{
-					allow: ['error'],
+					allow: ['error', 'info'],
 				},
 			],
 			'no-else-return': [
@@ -155,6 +155,7 @@ export default tsEslintConfig(
 			'prefer-template': 'error',
 			radix: 'error',
 			yoda: 'error',
+			'require-await': 'error',
 
 			// Style
 			curly: 'error',
@@ -316,6 +317,8 @@ export default tsEslintConfig(
 					next: 'function-overload',
 				},
 			],
+
+			// Unicorn
 			'unicorn/filename-case': [
 				'error',
 				{
@@ -323,7 +326,7 @@ export default tsEslintConfig(
 						camelCase: true,
 						pascalCase: true,
 					},
-					ignore: ['package-lock.json', /\.d\.ts$/],
+					ignore: [/\.json$/],
 				},
 			],
 

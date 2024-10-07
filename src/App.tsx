@@ -4,7 +4,7 @@ import styles from './App.module.css';
 import SkipLinks from './components/SkipLink';
 import UserCard from './components/UserCard';
 import { useUsers } from './components/UserCard/useUsers';
-import applyTheme from './utils/applyTheme';
+import handleClick from './utils/applyTheme';
 
 function App(): JSX.Element {
 	useEffect(() => {
@@ -39,9 +39,7 @@ function App(): JSX.Element {
 				<button
 					className="a-button a-button-primary"
 					type="button"
-					onClick={() => {
-						applyTheme();
-					}}
+					onClick={handleClick}
 				>
 					Change Theme
 				</button>

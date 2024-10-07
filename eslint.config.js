@@ -70,12 +70,12 @@ export default tsEslintConfig(
 			// eslint-disable-next-line import-x/no-named-as-default-member
 			...reactPlugin.configs.flat.recommended.languageOptions,
 			ecmaVersion: 'latest',
+			sourceType: 'module',
 			globals: {
 				...globals.serviceworker,
 				...globals.browser,
 				...globals.node,
 			},
-			sourceType: 'module',
 
 			parserOptions: {
 				projectService: true,

@@ -1,0 +1,6 @@
+{
+	"rules": {
+		"jsx_a11y/anchor-is-valid": "off",
+		"security/api-keys": "error"
+	}
+}

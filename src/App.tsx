@@ -1,55 +1,51 @@
-import './App.css';
+import { useEffect } from 'react';
 
-import { useState } from 'react';
-
-import viteLogo from '/vite.svg';
-
-import reactLogo from './assets/react.svg';
+import styles from './App.module.css';
+import SkipLinks from './components/SkipLink';
+import UserCard from './components/UserCard';
+import { useUsers } from './components/UserCard/useUsers';
+import applyTheme from './utils/applyTheme';
 
 function App(): JSX.Element {
-	const [count, setCount] = useState(0);
+	useEffect(() => {
+		function updateTheme({ matches }: MediaQueryListEvent): void {
+			document.body.classList.remove(matches ? 'light' : 'dark');
+			document.body.classList.add(matches ? 'dark' : 'light');
+		}
+
+		const THEME = globalThis.matchMedia('(prefers-color-scheme: dark)');
+
+		THEME.addEventListener('change', updateTheme);
+
+		return function (): void {
+			THEME.removeEventListener('change', updateTheme);
+		};
+	}, []);
 
 	return (
 		<>
-			<div>
-				<a
-					href="https://vitejs.dev"
-					rel="noreferrer"
-					target="_blank"
-				>
-					<img
-						alt="Vite logo"
-						className="logo"
-						src={viteLogo}
+			<SkipLinks />
+			<main className={`${styles['g-app']} max-width-desktop`}>
+				<h1 className="text-center">
+					⚡ Vite React Best Practices Template (by Codely) ⚛️
+				</h1>
+				<h2>Current users</h2>
+				{useUsers().map((user) => (
+					<UserCard
+						key={user.name}
+						user={user}
 					/>
-				</a>
-				<a
-					href="https://react.dev"
-					rel="noreferrer"
-					target="_blank"
-				>
-					<img
-						alt="React logo"
-						className="logo react"
-						src={reactLogo}
-					/>
-				</a>
-			</div>
-			<h1>Vite + React</h1>
-			<div className="card">
+				))}
 				<button
+					className="a-button a-button-primary"
 					type="button"
-					onClick={() => setCount((count) => count + 1)}
+					onClick={() => {
+						applyTheme();
+					}}
 				>
-					count is {count}
+					Change Theme
 				</button>
-				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className="read-the-docs">
-				Click on the Vite and React logos to learn more
-			</p>
+			</main>
 		</>
 	);
 }

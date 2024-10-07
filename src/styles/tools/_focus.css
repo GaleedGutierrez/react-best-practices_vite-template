@@ -1,0 +1,9 @@
+/* .focus-skip-link {
+	--outline-color: #{functions.light-dark(
+			variables.$background-light-dark-color,
+			variables.$background-lighter-gray-color
+		)};
+
+	outline: variables.$border-1 solid var(--outline-color);
+	outline-offset: variables.$space-2;
+} */

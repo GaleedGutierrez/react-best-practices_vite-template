@@ -7,13 +7,15 @@ import checkFile from 'eslint-plugin-check-file';
 import editorconfig from 'eslint-plugin-editorconfig';
 import eslintPluginImportX from 'eslint-plugin-import-x';
 import eslintPluginJsonc from 'eslint-plugin-jsonc';
-import jsxA11Y from 'eslint-plugin-jsx-a11y';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
 import oxlint from 'eslint-plugin-oxlint';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 // eslint-disable-next-line import-x/default
 import reactPlugin from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+// eslint-disable-next-line import-x/default
+import pluginSecurity from 'eslint-plugin-security';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import sortClassMembers from 'eslint-plugin-sort-class-members';
 import tsdoc from 'eslint-plugin-tsdoc';
@@ -29,14 +31,16 @@ import {
 const compat = new FlatCompat();
 
 export default tsEslintConfig(
-	eslintPluginImportX.flatConfigs.recommended,
-	eslintPluginImportX.flatConfigs.typescript,
-	eslintPluginPrettierRecommended,
 	oxlint.configs['flat/all'],
 	unicorn.configs['flat/recommended'],
+	eslintPluginImportX.flatConfigs.recommended,
+	eslintPluginImportX.flatConfigs.typescript,
+	// eslint-disable-next-line import-x/no-named-as-default-member
+	pluginSecurity.configs.recommended,
+	jsxA11y.flatConfigs.recommended,
+	eslintPluginPrettierRecommended,
 	...eslintPluginJsonc.configs['flat/recommended-with-jsonc'],
 	...eslintPluginJsonc.configs['flat/prettier'],
-
 	{
 		ignores: [
 			'dist/*',
@@ -578,7 +582,6 @@ export default tsEslintConfig(
 		// eslint-disable-next-line import-x/no-named-as-default-member
 		...reactPlugin.configs.flat['jsx-runtime'],
 		plugins: {
-			'jsx-a11y': jsxA11Y,
 			react: reactPlugin,
 			'react-hooks': reactHooks,
 			'react-refresh': reactRefresh,

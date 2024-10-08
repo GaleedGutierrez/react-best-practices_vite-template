@@ -1,3 +1,2 @@
 npx lint-staged
-npm run prettier:fix
-npm run check-for-dupes
+npm run pre-commit

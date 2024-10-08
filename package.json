@@ -29,7 +29,9 @@
 		"check-for-dupes": "npx jscpd ./",
 		"test": "jest",
 		"test:e2e": "playwright test",
-		"test:performance": "lighthouse http://localhost:4173/ --view --output html --output-path ./lighthouse-report.html"
+		"test:performance": "lighthouse http://localhost:4173/ --view --output html --output-path ./lighthouse-report.html",
+		"pre-commit": "npm run prettier:fix && npm run check-for-dupes",
+		"pre-push": "npm run lint && npm run stylelint && npm run prettier && npm run lint-html && npm run lint-md && npm run check-for-dupes && npm run test && npm run test:e2e"
 	},
 	"dependencies": {
 		"react": "^18.3.1",

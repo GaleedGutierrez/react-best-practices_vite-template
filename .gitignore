@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/osx,node,test,yarn,linux,macos,react,xcode,dotenv,nextjs,android,windows,serverless,reactnative,intellij+all,lighthouseci,androidstudio,xcodeinjection,visualstudiocode,openframeworks+visualstudio,cypressio
-# Edit at https://www.toptal.com/developers/gitignore?templates=osx,node,test,yarn,linux,macos,react,xcode,dotenv,nextjs,android,windows,serverless,reactnative,intellij+all,lighthouseci,androidstudio,xcodeinjection,visualstudiocode,openframeworks+visualstudio,cypressio
+# Created by https://www.toptal.com/developers/gitignore/api/osx,node,test,yarn,linux,macos,react,xcode,dotenv,nextjs,android,windows,cypressio,serverless,reactnative,intellij+all,lighthouseci,androidstudio,xcodeinjection,visualstudiocode,openframeworks+visualstudio
+# Edit at https://www.toptal.com/developers/gitignore?templates=osx,node,test,yarn,linux,macos,react,xcode,dotenv,nextjs,android,windows,cypressio,serverless,reactnative,intellij+all,lighthouseci,androidstudio,xcodeinjection,visualstudiocode,openframeworks+visualstudio
 
 ### Android ###
 # Gradle files
@@ -145,6 +145,8 @@ fabric.properties
 ### LighthouseCI ###
 # Lighthouse reports
 .lighthouseci/
+lighthouse-report
+lighthouse-report.*
 
 ### Linux ###
 *~
@@ -682,7 +684,6 @@ gradle-app.setting
 *mies
 
 # Other names that would make sense
-*tests
 *testsdir
 *testsfile
 *testsfiles
@@ -893,4 +894,9 @@ hs_err_pid*
 
 !/gradle/wrapper/gradle-wrapper.jar
 
-# End of https://www.toptal.com/developers/gitignore/api/osx,node,test,yarn,linux,macos,react,xcode,dotenv,nextjs,android,windows,serverless,reactnative,intellij+all,lighthouseci,androidstudio,xcodeinjection,visualstudiocode,openframeworks+visualstudio,cypressio
+# End of https://www.toptal.com/developers/gitignore/api/osx,node,test,yarn,linux,macos,react,xcode,dotenv,nextjs,android,windows,cypressio,serverless,reactnative,intellij+all,lighthouseci,androidstudio,xcodeinjection,visualstudiocode,openframeworks+visualstudio
+
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

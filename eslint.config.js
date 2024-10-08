@@ -6,9 +6,12 @@ import stylistic from '@stylistic/eslint-plugin';
 import checkFile from 'eslint-plugin-check-file';
 import editorconfig from 'eslint-plugin-editorconfig';
 import eslintPluginImportX from 'eslint-plugin-import-x';
+import jest from 'eslint-plugin-jest';
+import jestDom from 'eslint-plugin-jest-dom';
 import eslintPluginJsonc from 'eslint-plugin-jsonc';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import oxlint from 'eslint-plugin-oxlint';
+import playwright from 'eslint-plugin-playwright';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 // eslint-disable-next-line import-x/default
 import reactPlugin from 'eslint-plugin-react';
@@ -43,16 +46,15 @@ export default tsEslintConfig(
 	...eslintPluginJsonc.configs['flat/prettier'],
 	{
 		ignores: [
-			'dist/*',
-			'build/*',
-			'node_modules/*',
-			'**/*.bundle.js',
-			'**/index.bundle.*.js',
 			'**/googleAnalytics.js',
-			'test-results/*',
-			'playwright-report/*',
-			'**/fonts/*',
-			'**/font/*',
+			'**/__snapshots__/**',
+			'**/node_modules/**',
+			'**/dist/**',
+			'**/build/**',
+			'**/coverage/**',
+			'**/playwright-reports/**',
+			'**/test-results/**',
+			'**/lighthouse-report/**',
 		],
 	},
 	...fixupConfigRules(compat.extends('plugin:editorconfig/noconflict')),
@@ -881,6 +883,50 @@ export default tsEslintConfig(
 					accessorPairPositioning: 'getThenSet',
 				},
 			],
+		},
+	},
+	{
+		...jest.configs['flat/all'],
+		...jestDom.configs['flat/recommended'],
+		// ...testingLibrary.configs['flat/react'],
+		files: ['tests/**'],
+		ignores: ['tests/e2e/**'],
+		plugins: { jest },
+		rules: {
+			'@typescript-eslint/unbound-method': 'off',
+			'jest/unbound-method': 'error',
+			'jest/padding-around-after-all-blocks': 'error',
+			'jest/padding-around-after-each-blocks': 'error',
+			'jest/padding-around-before-all-blocks': 'error',
+			'jest/padding-around-before-each-blocks': 'error',
+			'jest/padding-around-expect-groups': 'error',
+			'jest/padding-around-describe-blocks': 'error',
+			'jest/padding-around-test-blocks': 'error',
+			'jest/padding-around-all': 'error',
+			'jest/prefer-equality-matcher': 'error',
+			'jest/prefer-comparison-matcher': 'error',
+			'jest/prefer-hooks-in-order': 'error',
+			'jest/prefer-hooks-on-top': 'error',
+			'jest/prefer-strict-equal': 'error',
+		},
+	},
+	{
+		...playwright.configs['flat/jest-playwright'],
+		files: ['tests/e2e/**'],
+		plugins: { playwright },
+		rules: {
+			'@typescript-eslint/explicit-function-return-type': 'off',
+			'playwright/prefer-equality-matcher': 'error',
+			'playwright/prefer-comparison-matcher': 'error',
+			'playwright/prefer-hooks-in-order': 'error',
+			'playwright/prefer-hooks-on-top': 'error',
+			'playwright/no-page-pause': 'error',
+			'playwright/prefer-to-be': 'error',
+			'playwright/prefer-to-contain': 'error',
+			'playwright/prefer-to-have-count': 'error',
+			'playwright/prefer-to-have-length': 'error',
+			'playwright/prefer-strict-equal': 'error',
+			'playwright/no-commented-out-tests': 'warn',
 		},
 	},
 );

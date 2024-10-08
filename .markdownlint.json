@@ -28,7 +28,16 @@
 	},
 	"proper-names": {
 		"code_blocks": false,
-		"names": ["Cake.Markdownlint", "CommonMark", "JavaScript", "Markdown", "markdown-it", "markdownlint", "Node.js", "TypeScript"]
+		"names": [
+			"Cake.Markdownlint",
+			"CommonMark",
+			"JavaScript",
+			"Markdown",
+			"markdown-it",
+			"markdownlint",
+			"Node.js",
+			"TypeScript"
+		]
 	},
 	"reference-links-images": {
 		"shortcut_syntax": true

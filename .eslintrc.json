@@ -11,12 +11,24 @@
 		// "cypress/globals": true,
 		// mocha: true,
 	},
-	"extends": ["eslint:recommended", "plugin:import/recommended", "plugin:editorconfig/noconflict", "plugin:prettier/recommended", "plugin:oxlint/recommended", "plugin:security/recommended-legacy"],
+	"extends": [
+		"eslint:recommended",
+		"plugin:import/recommended",
+		"plugin:editorconfig/noconflict",
+		"plugin:prettier/recommended",
+		"plugin:oxlint/recommended",
+		"plugin:security/recommended-legacy"
+	],
 	"overrides": [
 		// TypeScript
 		{
 			"files": ["*.ts", "*.mts", "*.cts", "*.tsx"],
-			"extends": ["plugin:@typescript-eslint/recommended", "plugin:@typescript-eslint/recommended-type-checked", "plugin:@typescript-eslint/stylistic-type-checked", "plugin:import/typescript"],
+			"extends": [
+				"plugin:@typescript-eslint/recommended",
+				"plugin:@typescript-eslint/recommended-type-checked",
+				"plugin:@typescript-eslint/stylistic-type-checked",
+				"plugin:import/typescript"
+			],
 			"plugins": ["@typescript-eslint", "eslint-plugin-tsdoc"],
 			// parserOptions: {
 			// 	project: ["./tsconfig.app.json", "./tsconfig.node.json", "./tsconfig.json"],
@@ -32,8 +44,14 @@
 				"@typescript-eslint/prefer-readonly": "error",
 				"@typescript-eslint/switch-exhaustiveness-check": "error",
 				"@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
-				"@typescript-eslint/promise-function-async": ["error", { "checkArrowFunctions": false }],
-				"@typescript-eslint/no-confusing-void-expression": ["error", { "ignoreArrowShorthand": true }],
+				"@typescript-eslint/promise-function-async": [
+					"error",
+					{ "checkArrowFunctions": false }
+				],
+				"@typescript-eslint/no-confusing-void-expression": [
+					"error",
+					{ "ignoreArrowShorthand": true }
+				],
 				"@typescript-eslint/naming-convention": [
 					"error",
 					{
@@ -44,7 +62,20 @@
 						"selector": "variable",
 						"types": ["boolean"],
 						"format": ["PascalCase", "UPPER_CASE"],
-						"prefix": ["is", "should", "has", "can", "did", "will", "IS_", "SHOULD_", "HAS_", "CAN_", "DID_", "WILL_"]
+						"prefix": [
+							"is",
+							"should",
+							"has",
+							"can",
+							"did",
+							"will",
+							"IS_",
+							"SHOULD_",
+							"HAS_",
+							"CAN_",
+							"DID_",
+							"WILL_"
+						]
 					},
 					{
 						"selector": "function",
@@ -233,7 +264,12 @@
 		// React
 		{
 			"files": ["*.tsx", "*.jsx"],
-			"extends": ["plugin:jsx-a11y/strict", "plugin:react-hooks/recommended", "plugin:react/recommended", "plugin:react/jsx-runtime"],
+			"extends": [
+				"plugin:jsx-a11y/strict",
+				"plugin:react-hooks/recommended",
+				"plugin:react/recommended",
+				"plugin:react/jsx-runtime"
+			],
 			"plugins": ["jsx-a11y", "react", "react-refresh"],
 			"rules": {
 				"react/boolean-prop-naming": [
@@ -252,9 +288,15 @@
 						"reset": false
 					}
 				],
-				"react/default-props-match-prop-types": ["error", { "allowRequiredDefaults": false }],
+				"react/default-props-match-prop-types": [
+					"error",
+					{ "allowRequiredDefaults": false }
+				],
 				"react/destructuring-assignment": ["error", "always"],
-				"react/forbid-foreign-prop-types": ["warn", { "allowInPropTypes": true }],
+				"react/forbid-foreign-prop-types": [
+					"warn",
+					{ "allowInPropTypes": true }
+				],
 				"react/forbid-prop-types": [
 					"error",
 					{
@@ -266,14 +308,23 @@
 				"react/function-component-definition": [
 					"error",
 					{
-						"namedComponents": ["function-declaration", "arrow-function"],
+						"namedComponents": [
+							"function-declaration",
+							"arrow-function"
+						],
 						"unnamedComponents": "arrow-function"
 					}
 				],
-				"react/hook-use-state": ["error", { "allowDestructuredState": true }],
+				"react/hook-use-state": [
+					"error",
+					{ "allowDestructuredState": true }
+				],
 				"react/iframe-missing-sandbox": "error",
 				"react/jsx-boolean-value": ["error", "never"],
-				"@stylistic/jsx-closing-bracket-location": ["error", "line-aligned"],
+				"@stylistic/jsx-closing-bracket-location": [
+					"error",
+					"line-aligned"
+				],
 				"@stylistic/jsx-closing-tag-location": "error",
 				"@stylistic/jsx-curly-brace-presence": [
 					"error",
@@ -290,10 +341,20 @@
 						"singleline": "consistent"
 					}
 				],
-				"@stylistic/jsx-curly-spacing": ["error", "never", { "allowMultiline": true }],
+				"@stylistic/jsx-curly-spacing": [
+					"error",
+					"never",
+					{ "allowMultiline": true }
+				],
 				"@stylistic/jsx-equals-spacing": ["error", "never"],
-				"react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }],
-				"@stylistic/jsx-first-prop-new-line": ["error", "multiline-multiprop"],
+				"react/jsx-filename-extension": [
+					"error",
+					{ "extensions": [".jsx", ".tsx"] }
+				],
+				"@stylistic/jsx-first-prop-new-line": [
+					"error",
+					"multiline-multiprop"
+				],
 				"react/jsx-fragments": "error",
 				"react/jsx-handler-names": [
 					"error",
@@ -302,7 +363,10 @@
 					}
 				],
 				"@stylistic/jsx-indent-props": ["error", "tab"],
-				"@stylistic/jsx-max-props-per-line": ["error", { "maximum": 1, "when": "multiline" }],
+				"@stylistic/jsx-max-props-per-line": [
+					"error",
+					{ "maximum": 1, "when": "multiline" }
+				],
 				"react/jsx-no-bind": [
 					"error",
 					{
@@ -358,20 +422,65 @@
 				"react/no-will-update-set-state": "error",
 				"react/prefer-es6-class": ["error", "always"],
 				"react/prefer-exact-props": "error",
-				"react/prefer-stateless-function": ["error", { "ignorePureComponents": true }],
+				"react/prefer-stateless-function": [
+					"error",
+					{ "ignorePureComponents": true }
+				],
 				"@stylistic/jsx-self-closing-comp": "error",
 				"react/sort-comp": [
 					"error",
 					{
-						"order": ["static-variables", "static-methods", "instance-variables", "lifecycle", "/^handle.+$/", "/^on.+$/", "getters", "setters", "/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/", "instance-methods", "everything-else", "rendering"],
+						"order": [
+							"static-variables",
+							"static-methods",
+							"instance-variables",
+							"lifecycle",
+							"/^handle.+$/",
+							"/^on.+$/",
+							"getters",
+							"setters",
+							"/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/",
+							"instance-methods",
+							"everything-else",
+							"rendering"
+						],
 						"groups": {
-							"lifecycle": ["displayName", "propTypes", "contextTypes", "childContextTypes", "mixins", "statics", "defaultProps", "constructor", "getDefaultProps", "getInitialState", "state", "getChildContext", "getDerivedStateFromProps", "componentWillMount", "UNSAFE_componentWillMount", "componentDidMount", "componentWillReceiveProps", "UNSAFE_componentWillReceiveProps", "shouldComponentUpdate", "componentWillUpdate", "UNSAFE_componentWillUpdate", "getSnapshotBeforeUpdate", "componentDidUpdate", "componentDidCatch", "componentWillUnmount"],
+							"lifecycle": [
+								"displayName",
+								"propTypes",
+								"contextTypes",
+								"childContextTypes",
+								"mixins",
+								"statics",
+								"defaultProps",
+								"constructor",
+								"getDefaultProps",
+								"getInitialState",
+								"state",
+								"getChildContext",
+								"getDerivedStateFromProps",
+								"componentWillMount",
+								"UNSAFE_componentWillMount",
+								"componentDidMount",
+								"componentWillReceiveProps",
+								"UNSAFE_componentWillReceiveProps",
+								"shouldComponentUpdate",
+								"componentWillUpdate",
+								"UNSAFE_componentWillUpdate",
+								"getSnapshotBeforeUpdate",
+								"componentDidUpdate",
+								"componentDidCatch",
+								"componentWillUnmount"
+							],
 							"rendering": ["/^render.+$/", "render"]
 						}
 					}
 				],
 				"react/state-in-constructor": ["error", "always"],
-				"react/static-property-placement": ["error", "property assignment"],
+				"react/static-property-placement": [
+					"error",
+					"property assignment"
+				],
 				"react/style-prop-object": "error",
 				"@stylistic/jsx-sort-props": [
 					"warn",
@@ -383,7 +492,10 @@
 					}
 				],
 
-				"react-refresh/only-export-components": ["warn", { "allowConstantExport": true }]
+				"react-refresh/only-export-components": [
+					"warn",
+					{ "allowConstantExport": true }
+				]
 			}
 		},
 
@@ -396,7 +508,15 @@
 				"sort-class-members/sort-class-members": [
 					"error",
 					{
-						"order": ["[properties]", "[conventional-private-properties]", "[static-properties]", "constructor", "[methods]", "[conventional-private-methods]", "[static-methods]"],
+						"order": [
+							"[properties]",
+							"[conventional-private-properties]",
+							"[static-properties]",
+							"constructor",
+							"[methods]",
+							"[conventional-private-methods]",
+							"[static-methods]"
+						],
 						"accessorPairPositioning": "getThenSet"
 					}
 				]
@@ -494,7 +614,10 @@
 		// JSON
 		{
 			"files": ["*.json"],
-			"extends": ["plugin:jsonc/recommended-with-jsonc", "plugin:jsonc/prettier"]
+			"extends": [
+				"plugin:jsonc/recommended-with-jsonc",
+				"plugin:jsonc/prettier"
+			]
 		}
 	],
 	"parserOptions": {
@@ -504,7 +627,11 @@
 		"ecmaFeatures": {
 			"jsx": true
 		},
-		"project": ["./tsconfig.json", "./tsconfig.node.json", "./tsconfig.app.json"]
+		"project": [
+			"./tsconfig.json",
+			"./tsconfig.node.json",
+			"./tsconfig.app.json"
+		]
 	},
 	"settings": {
 		"react": {
@@ -512,7 +639,14 @@
 			"version": "detect"
 		}
 	},
-	"plugins": ["import", "simple-import-sort", "unused-imports", "check-file", "editorconfig", "@stylistic"],
+	"plugins": [
+		"import",
+		"simple-import-sort",
+		"unused-imports",
+		"check-file",
+		"editorconfig",
+		"@stylistic"
+	],
 	"rules": {
 		"prettier/prettier": "error",
 
@@ -584,13 +718,51 @@
 			"error",
 			{
 				"blankLine": "always",
-				"prev": ["directive", "import", "cjs-import", "export", "cjs-export", "const", "let", "var", "class", "block", "block-like", "multiline-block-like", "function", "iife", "expression", "case", "default", "interface", "type"],
+				"prev": [
+					"directive",
+					"import",
+					"cjs-import",
+					"export",
+					"cjs-export",
+					"const",
+					"let",
+					"var",
+					"class",
+					"block",
+					"block-like",
+					"multiline-block-like",
+					"function",
+					"iife",
+					"expression",
+					"case",
+					"default",
+					"interface",
+					"type"
+				],
 				"next": "*"
 			},
 			{
 				"blankLine": "always",
 				"prev": "*",
-				"next": ["import", "cjs-import", "export", "cjs-export", "const", "let", "var", "class", "block", "block-like", "multiline-block-like", "function", "iife", "expression", "return", "interface", "type"]
+				"next": [
+					"import",
+					"cjs-import",
+					"export",
+					"cjs-export",
+					"const",
+					"let",
+					"var",
+					"class",
+					"block",
+					"block-like",
+					"multiline-block-like",
+					"function",
+					"iife",
+					"expression",
+					"return",
+					"interface",
+					"type"
+				]
 			},
 			{
 				"blankLine": "always",
@@ -610,7 +782,11 @@
 			{ "blankLine": "any", "prev": "expression", "next": "expression" },
 			{
 				"blankLine": "never",
-				"prev": ["singleline-const", "singleline-let", "singleline-var"],
+				"prev": [
+					"singleline-const",
+					"singleline-let",
+					"singleline-var"
+				],
 				"next": ["singleline-const", "singleline-let", "singleline-var"]
 			},
 			{

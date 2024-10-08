@@ -1,5 +1,22 @@
 {
-	"plugins": ["react", "unicorn", "typescript", "oxc", "jsx_a11y", "import", "nextjs", "jsdoc", "promise", "react-perf", "vitest", "security", "tree-shaking", "node", "unicorn", "jest"],
+	"plugins": [
+		"react",
+		"unicorn",
+		"typescript",
+		"oxc",
+		"jsx_a11y",
+		"import",
+		"nextjs",
+		"jsdoc",
+		"promise",
+		"react-perf",
+		"vitest",
+		"security",
+		"tree-shaking",
+		"node",
+		"unicorn",
+		"jest"
+	],
 	"rules": {
 		// Eslint rules
 		"array-callback-return": [

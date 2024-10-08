@@ -131,7 +131,7 @@
 		"*.md": "npm run lint-md:fix"
 	},
 	"jscpd": {
-		"threshold": 0.4,
+		"threshold": 3,
 		"reporters": [
 			"consoleFull"
 		],

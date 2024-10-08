@@ -25,7 +25,7 @@
 		"stylelint:fix": "stylelint --fix ./**/*.{css,scss}",
 		"lint-md": "markdownlint-cli2 --config \".markdownlint.json\" **/*.md \"#node_modules\"",
 		"lint-md:fix": "markdownlint-cli2 --config \".markdownlint.json\" --fix **/*.md \"#node_modules\"",
-		"lint-html": "htmlhint **/*.html",
+		"lint-html": "htmlhint **/*.html --ignore=\"**/node_modules/**,**/dist/**,**/build/**,**/coverage/**,**/playwright-report/**,**/test-results/**,**/lighthouse-report/**\"",
 		"check-for-dupes": "npx jscpd ./",
 		"test": "jest",
 		"test:e2e": "playwright test",

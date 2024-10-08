@@ -52,7 +52,7 @@ export default tsEslintConfig(
 			'**/dist/**',
 			'**/build/**',
 			'**/coverage/**',
-			'**/playwright-reports/**',
+			'**/playwright-report/**',
 			'**/test-results/**',
 			'**/lighthouse-report/**',
 		],

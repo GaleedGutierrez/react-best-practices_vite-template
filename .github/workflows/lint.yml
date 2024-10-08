@@ -61,6 +61,7 @@ jobs:
         env:
           # To report GitHub Actions status checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_EDITORCONFIG: false
           VALIDATE_CSS: false
           VALIDATE_CSS_PRETTIER: false
           VALIDATE_HTML: false

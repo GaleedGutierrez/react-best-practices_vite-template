@@ -43,6 +43,3 @@ indent_size = 4
 
 [*.py]
 indent_brace_style = Python
-
-[{.gitignore,*.json,*.md,config.yml,.eslintrc.json, commitlint.yml, eslint.config.js, _typography.css}]
-max_line_length = off

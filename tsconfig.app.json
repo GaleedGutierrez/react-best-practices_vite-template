@@ -39,5 +39,5 @@
 			"/*": ["public/*"]
 		}
 	},
-	"include": ["src", "tests", "**/*.ts", "jest.config.js"]
+	"include": ["src", "tests", "**/*.ts", "jest.config.js", "e2e"]
 }

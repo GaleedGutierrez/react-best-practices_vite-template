@@ -1,1 +1,5 @@
-npm run pre-push
+npx lint-staged
+npm run prettier
+npm run check-for-dupes
+npm run test
+npm run test:e2e

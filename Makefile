@@ -14,10 +14,6 @@ build:
 preview:
 	npm run preview
 
-.PHONY: test
-test:
-	npm test
-
 .PHONY: lint
 lint:
 	npm run lint
@@ -57,3 +53,15 @@ lint-html:
 .PHONY: check-for-dupes
 check-for-dupes:
 	npm run check-for-dupes
+
+.PHONY: test
+test:
+	npm test
+
+.PHONY: test-e2e
+test-e2e:
+	npm run test:e2e
+
+.PHONY: test-performance
+test-performance:
+	npm run test:performance

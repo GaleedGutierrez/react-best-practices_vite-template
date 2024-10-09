@@ -1,13 +1,11 @@
-import { fixupConfigRules, fixupPluginRules } from '@eslint/compat';
+import { fixupConfigRules } from '@eslint/compat';
 // eslint-disable-next-line import-x/namespace
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
+import vitest from '@vitest/eslint-plugin';
 import checkFile from 'eslint-plugin-check-file';
-import editorconfig from 'eslint-plugin-editorconfig';
 import eslintPluginImportX from 'eslint-plugin-import-x';
-import jest from 'eslint-plugin-jest';
-import jestDom from 'eslint-plugin-jest-dom';
 import eslintPluginJsonc from 'eslint-plugin-jsonc';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import oxlint from 'eslint-plugin-oxlint';
@@ -64,7 +62,6 @@ export default tsEslintConfig(
 			'simple-import-sort': simpleImportSort,
 			'unused-imports': unusedImports,
 			'check-file': checkFile,
-			editorconfig: fixupPluginRules(editorconfig),
 			'@stylistic': stylistic,
 		},
 
@@ -886,30 +883,33 @@ export default tsEslintConfig(
 		},
 	},
 	{
-		...jest.configs['flat/all'],
-		...jestDom.configs['flat/recommended'],
 		// ...testingLibrary.configs['flat/react'],
 		files: ['tests/**'],
 		ignores: ['tests/e2e/**'],
-		plugins: { jest },
+		plugins: { vitest },
 		rules: {
+			...vitest.configs.recommended.rules,
 			'@typescript-eslint/unbound-method': 'off',
-			'jest/unbound-method': 'error',
-			'jest/padding-around-after-all-blocks': 'error',
-			'jest/padding-around-after-each-blocks': 'error',
-			'jest/padding-around-before-all-blocks': 'error',
-			'jest/padding-around-before-each-blocks': 'error',
-			'jest/padding-around-expect-groups': 'error',
-			'jest/padding-around-describe-blocks': 'error',
-			'jest/padding-around-test-blocks': 'error',
-			'jest/padding-around-all': 'error',
-			'jest/prefer-equality-matcher': 'error',
-			'jest/prefer-comparison-matcher': 'error',
-			'jest/prefer-hooks-in-order': 'error',
-			'jest/prefer-hooks-on-top': 'error',
-			'jest/prefer-strict-equal': 'error',
+			'vitest/prefer-equality-matcher': 'error',
+			'vitest/prefer-comparison-matcher': 'error',
+			'vitest/prefer-hooks-in-order': 'error',
+			'vitest/prefer-hooks-on-top': 'error',
+			'vitest/prefer-strict-equal': 'error',
+			'vitest/prefer-to-be': 'error',
+			'vitest/prefer-to-contain': 'error',
+			'vitest/prefer-to-have-length': 'error',
+			'vitest/no-alias-methods': 'error',
+			'vitest/no-conditional-expect': 'error',
+			'vitest/no-disabled-tests': 'warn',
+			'vitest/no-done-callback': 'error',
+			'vitest/no-focused-tests': 'error',
+			'vitest/no-interpolation-in-snapshots': 'error',
+			'vitest/no-mocks-import': 'error',
+			'vitest/no-standalone-expect': 'error',
+			'vitest/no-test-prefixes': 'error',
 		},
 	},
+	...fixupConfigRules(compat.extends('plugin:jest-dom/recommended')),
 	{
 		...playwright.configs['flat/jest-playwright'],
 		files: ['tests/e2e/**'],

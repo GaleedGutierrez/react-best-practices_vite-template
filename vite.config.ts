@@ -43,6 +43,9 @@ export default defineConfig(({ mode }) => {
 			transformMode: {
 				web: ['**/*.tsx', '**/*.ts'], // Support for TypeScript files
 			},
+			reporters: process.env.GITHUB_ACTIONS
+				? ['dot', 'github-actions']
+				: ['dot'], // The list of reporters that will be used to report the test results
 		},
 	};
 });

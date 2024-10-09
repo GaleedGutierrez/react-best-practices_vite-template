@@ -22,12 +22,13 @@ export default defineConfig(({ mode }) => {
 		},
 		test: {
 			clearMocks: true, // Automatically clear mock calls, instances, contexts and results before every test
-			coverage: {
-				enabled: true, // Indicates whether the coverage information should be collected while executing the test
-				provider: 'v8', // Indicates which provider should be used to instrument code for coverage
-				reportsDirectory: 'coverage', // The directory where Vitest should output its coverage files
-				include: ['src/**/*'], // The glob patterns Vitest uses to detect test files
-			},
+			// If you need coverage, you can enable it here
+			// coverage: {
+			// 	enabled: true, // Indicates whether the coverage information should be collected while executing the test
+			// 	provider: 'v8', // Indicates which provider should be used to instrument code for coverage
+			// 	reportsDirectory: 'coverage', // The directory where Vitest should output its coverage files
+			// 	include: ['src/**/*'], // The glob patterns Vitest uses to detect test files
+			// },
 			globals: true,
 			environment: 'jsdom', // The test environment that will be used for testing
 			setupFiles: ['./tests/setupTests.ts'], // A list of paths to modules that run some code to configure or set up the testing framework before each test

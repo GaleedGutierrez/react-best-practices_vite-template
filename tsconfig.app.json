@@ -23,20 +23,21 @@
 		/* Paths */
 		"baseUrl": "./",
 		"paths": {
+			"/*": ["public/*"],
 			"@src/*": ["src/*"],
 			"@tests/*": ["tests/*"],
-			"@styles/*": ["src/styles/*"],
-			"@utils/*": ["src/utils/*"],
-			"@templates/*": ["src/templates/*"],
-			"@images/*": ["assets/images/*"],
+			"@e2e/*": ["e2e/*"],
+			"@public/*": ["public/*"],
+			"@assets/*": ["src/assets/*"],
 			"@components/*": ["src/components/*"],
-			"@hooks/*": ["src/hooks/*"],
 			"@context/*": ["src/context/*"],
 			"@data/*": ["src/data/*"],
+			"@hooks/*": ["src/hooks/*"],
 			"@services/*": ["src/services/*"],
-			"@assets/*": ["src/assets/*"],
-			"@public/*": ["public/*"],
-			"/*": ["public/*"]
+			"@templates/*": ["src/templates/*"],
+			"@styles/*": ["src/styles/*"],
+			"@utils/*": ["src/utils/*"],
+			"@images/*": ["src/assets/images/*"]
 		}
 	},
 	"include": ["src", "tests", "**/*.ts", "jest.config.js", "e2e"]

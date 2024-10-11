@@ -1,4 +1,5 @@
 /* eslint-disable @stylistic/padding-line-between-statements */
+import { AxeBuilder } from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
@@ -18,5 +19,17 @@ test.describe('The Home Page', () => {
 		await BUTTON_THEME.click();
 		const BODY_TAG = page.locator('body');
 		await expect(BODY_TAG).toHaveClass('dark');
+	});
+
+	test.describe('Accessibility', () => {
+		test('Should not have any automatically detectable accessibility issues', async ({
+			page,
+		}) => {
+			const ACCESSIBILITY_SCAN_RESULTS = await new AxeBuilder({
+				page,
+			}).analyze();
+
+			expect(ACCESSIBILITY_SCAN_RESULTS.violations).toHaveLength(0);
+		});
 	});
 });

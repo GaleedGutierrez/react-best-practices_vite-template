@@ -29,7 +29,7 @@
 		"check-for-dupes": "npx jscpd ./",
 		"test": "vitest run",
 		"test:e2e": "playwright test",
-		"test:performance": "lighthouse http://localhost:4173/ --view --output html --output-path ./lighthouse-report.html"
+		"test:performance": "lighthouse http://localhost:4173/ --view --output html --output-path ./lighthouse-report/lighthouse-report.html"
 	},
 	"dependencies": {
 		"react": "^18.3.1",
@@ -121,10 +121,10 @@
 		"singleAttributePerLine": true
 	},
 	"lint-staged": {
-		"*.(j|t)s": "npm run lint",
-		"*{css,s(a|c)ss}": "npm run stylelint",
+		"*.(j|t)s": "npm run lint:fix",
+		"*{css,s(a|c)ss}": "npm run stylelint:fix",
 		"*.html": "npm run lint-html",
-		"*.md": "npm run lint-md"
+		"*.md": "npm run lint-md:fix"
 	},
 	"jscpd": {
 		"threshold": 3,

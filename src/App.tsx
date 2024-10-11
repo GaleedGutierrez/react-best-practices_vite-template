@@ -24,7 +24,9 @@ function App(): JSX.Element {
 
 	return (
 		<>
-			<SkipLinks />
+			<nav>
+				<SkipLinks />
+			</nav>
 			<main className={`${styles['g-app']} max-width-desktop`}>
 				<h1 className="text-center">
 					⚡ Vite React Best Practices Template (by Codely) ⚛️

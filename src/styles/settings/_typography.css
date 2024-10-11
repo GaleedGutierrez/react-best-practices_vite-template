@@ -3,13 +3,6 @@
 	/* Typography scale */
 	--fs-base: 62.5%;
 
-	/* Font */
-	--font-fallback: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI",
-		roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue",
-		sans-serif;
-	--_font-family: "Instrument Sans", var(--font-fallback);
-	--primary-font: var(--_font-family);
-
 	/* Weight */
 	--weight-thin: 100;
 	--weight-extra-light: 200;
@@ -47,19 +40,3 @@
 	--lh-6: 4rem;
 	--lh-7: 4.8rem;
 }
-
-/* Font Family */
-
-/* Your font. E.g.: */
-
-/* @font-face {
-	font-family: "Instrument Sans";
-	src:
-		local("Instrument Sans"),
-		local("Instrument_Sans"),
-		local("Instrument-Sans"),
-		local("InstrumentSans"),
-		url("../../assets/fonts/Instrument_Sans/InstrumentSans-VariableFont_wdth,wght.ttf")
-			format("truetype");
-	font-display: swap;
-} */

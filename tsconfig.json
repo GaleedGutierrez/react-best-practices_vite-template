@@ -3,7 +3,7 @@
 		"baseUrl": "./",
 		"paths": {
 			"/*": ["public/*"],
-			"@src/*": ["src/*"],
+			"@/*": ["src/*"],
 			"@tests/*": ["tests/*"],
 			"@e2e/*": ["e2e/*"],
 			"@public/*": ["public/*"],
@@ -12,10 +12,15 @@
 			"@context/*": ["src/context/*"],
 			"@data/*": ["src/data/*"],
 			"@hooks/*": ["src/hooks/*"],
+			"@models/*": ["src/models/*"],
+			"@pages/*": ["src/pages/*"],
+			"@routes/*": ["src/routes/*"],
+			"@state/*": ["src/state/*"],
 			"@services/*": ["src/services/*"],
 			"@templates/*": ["src/templates/*"],
 			"@styles/*": ["src/styles/*"],
 			"@utils/*": ["src/utils/*"],
+			"@views/*": ["src/views/*"],
 			"@images/*": ["src/assets/images/*"]
 		}
 	},

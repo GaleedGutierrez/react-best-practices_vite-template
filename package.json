@@ -81,7 +81,7 @@
 		"eslint-plugin-tsdoc": "^0.3.0",
 		"eslint-plugin-unicorn": "^56.0.0",
 		"eslint-plugin-unused-imports": "^4.1.4",
-		"globals": "^15.10.0",
+		"globals": "^15.12.0",
 		"htmlhint": "^1.1.4",
 		"husky": "^9.1.6",
 		"identity-obj-proxy": "^3.0.0",

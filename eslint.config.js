@@ -324,7 +324,14 @@ export default tsEslintConfig(
 						camelCase: true,
 						pascalCase: true,
 					},
-					ignore: [/\.json$/],
+					ignore: [/\.json$/, /vite-env\.d\.ts$/],
+				},
+			],
+
+			'unicorn/prevent-abbreviations': [
+				'error',
+				{
+					checkFilenames: false,
 				},
 			],
 
@@ -775,15 +782,6 @@ export default tsEslintConfig(
 				},
 			],
 
-			'react/button-has-type': [
-				'error',
-				{
-					button: true,
-					submit: true,
-					reset: false,
-				},
-			],
-
 			'react/default-props-match-prop-types': [
 				'error',
 				{
@@ -917,19 +915,6 @@ export default tsEslintConfig(
 				'error',
 				{
 					beforeSelfClosing: 'always',
-				},
-			],
-
-			'@stylistic/jsx-wrap-multilines': [
-				'error',
-				{
-					declaration: 'parens-new-line',
-					assignment: 'parens-new-line',
-					return: 'parens-new-line',
-					arrow: 'parens-new-line',
-					condition: 'parens-new-line',
-					logical: 'parens-new-line',
-					prop: 'parens-new-line',
 				},
 			],
 

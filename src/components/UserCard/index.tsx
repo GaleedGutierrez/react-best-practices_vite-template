@@ -1,4 +1,6 @@
-import styles from './styles.module.css';
+import { JSX } from 'react';
+
+import styles from './index.module.css';
 import { User } from './useUsers';
 
 function UserCard({ user }: Readonly<{ user: User }>): JSX.Element {

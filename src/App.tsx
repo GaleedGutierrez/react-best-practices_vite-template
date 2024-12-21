@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { JSX, useEffect } from 'react';
 
 import styles from './App.module.css';
 import SkipLinks from './components/SkipLink';

@@ -32,18 +32,29 @@
 			"@components/*": ["src/components/*"],
 			"@context/*": ["src/context/*"],
 			"@data/*": ["src/data/*"],
+			"@guard/*": ["src/guard/*"],
 			"@hooks/*": ["src/hooks/*"],
+			"@icons/*": ["src/components/Icons/*"],
 			"@models/*": ["src/models/*"],
 			"@pages/*": ["src/pages/*"],
+			"@private/*": ["src/private/*"],
 			"@routes/*": ["src/routes/*"],
-			"@state/*": ["src/state/*"],
 			"@services/*": ["src/services/*"],
+			"@state/*": ["src/state/*"],
 			"@templates/*": ["src/templates/*"],
 			"@styles/*": ["src/styles/*"],
 			"@utils/*": ["src/utils/*"],
 			"@views/*": ["src/views/*"],
 			"@images/*": ["src/assets/images/*"]
-		}
+		},
+		"types": ["vite/client"]
 	},
-	"include": ["src", "tests", "**/*.ts", "e2e"]
+	"include": [
+		"src",
+		"tests",
+		"**/*.ts",
+		"jest.config.js",
+		"e2e",
+		"src/ErrorBoundary.tsx"
+	]
 }

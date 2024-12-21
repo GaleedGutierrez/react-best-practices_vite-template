@@ -1,3 +1,5 @@
+import { JSX } from 'react';
+
 function SkipLinks(): JSX.Element {
 	return (
 		<ul>

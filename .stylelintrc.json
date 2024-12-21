@@ -457,6 +457,7 @@
 			"dvmin",
 			"dvmax",
 			"px",
+			"ch",
 			"%",
 			"fr",
 			"rem",

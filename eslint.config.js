@@ -1,5 +1,4 @@
 import { fixupConfigRules } from '@eslint/compat';
-// eslint-disable-next-line import-x/namespace
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
@@ -21,7 +20,6 @@ import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import sortClassMembers from 'eslint-plugin-sort-class-members';
 import tsdoc from 'eslint-plugin-tsdoc';
 import unicorn from 'eslint-plugin-unicorn';
-// eslint-disable-next-line import-x/namespace, import-x/default, import-x/no-named-as-default, import-x/no-named-as-default-member
 import unusedImports from 'eslint-plugin-unused-imports';
 import globals from 'globals';
 import {
